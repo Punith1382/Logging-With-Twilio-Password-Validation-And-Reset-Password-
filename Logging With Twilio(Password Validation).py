@@ -6,7 +6,7 @@ from twilio.rest import Client
 logging.basicConfig(filename="password_attempts.log", level=logging.INFO)
 logging.getLogger("twilio").setLevel(logging.WARNING)
 
-CREDENTIALS_FILE = "credentials.txt"
+CREDENTIALS_FILE = "Credentials-New.txt"
 
 def load_credentials():
     #Load credentials from text file into a dictionary
@@ -114,3 +114,4 @@ if username not in user_credentials:
 else:
     validator = PasswordValidator(username,user_credentials[username]["password"],user_credentials[username]["phone"])
     validator.validate()                #  user_credentials[Moksha]["password"]
+
